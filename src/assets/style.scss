@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$brand: #fe462d;
+$w: #fff;
+$black: #000;
+$text-color: #6b5144;
+$price-color: #f8cfcb;
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+// top section css
+.top {
+  background: $brand;
+  .top-left {
+    i {
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 50%;
+      border: 1px solid $text-color;
+      color: $w;
+      display: block;
+      background-color: $text-color;
+      &:hover {
+        color: $brand;
+      }
+    }
+  }
+  .top-right {
+    font-size: 14px;
+    i {
+      padding: 0 5px;
+      font-size: 12px;
+    }
+  }
+  .main-top {
+    a {
+      font-size: 14px;
+      color: $w;
+      border: 0;
+    }
+    .dropdown-menu {
+      .dropdown-item {
+        color: $black !important;
+      }
+    }
+  }
+}
+
+// header section
+
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.725) !important;
+    padding: 0 10px;
+    &:hover {
+      color: $brand !important;
+    }
+  }
+  .nav-icon {
+    i {
+      font-size: 14px;
+      padding: 7px 8px;
+      border-radius: 50%;
+      border: 1px solid $text-color;
+      &:hover {
+        background: $brand;
+        color: $w;
+        border-color: $brand;
+      }
+    }
+  }
+
+
+
+
+// main slider section
+.hero {
+  position: relative;
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    padding: 20px;
+    display: none;
+    border-radius: 50%;
+    border: 1px solid $black;
+    color: $w;
+    background-color: $black;
+  }
+  .carousel-control-next-icon {
+    position: absolute;
+    top: 45%;
+    right: 20px;
+  }
+  .carousel-control-prev-icon {
+    position: absolute;
+    top: 45%;
+    left: 20px;
+  }
+  &:hover {
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      display: block;
+    }
+  }
+}
+// feature section
+.popular-content {
+  h5 {
+    color: $black;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 213px;
+      border: 1px solid $brand;
+      border-radius: 2px;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+  }
+  .view-more {
+    .btn {
+      display: inline;
+    }
+  }
+  hr {
+    color: $text-color;
+  }
+
+  .card {
+    border: 0;
+    position: relative;
+    transition: 0.9s;
+
+    .card-img {
+      img {
+        width: 100%;
+        height: 200px;
+        border-radius: 2px !important;
+      }
+    }
+    .card-text {
+      p {
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 14px;
+        line-height: 25px;
+      }
+      color: $black;
+      .card-title {
+        color: $black;
+        &:hover {
+          color: $brand;
+        }
+      }
+    }
+    .icon-box {
+      position: absolute;
+      top: 40%;
+      left: 15%;
+      .box-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: $brand;
+        display: none;
+        a {
+          i {
+            color: $w;
+          }
+        }
+        &:hover {
+          background-color: $black;
+        }
+      }
+    }
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      .box-icon {
+        display: block;
+      }
+    }
+  }
+
+  // box banner
+  .box-banner {
+    overflow: hidden;
+    img {
+      width: 100%;
+      transition: 0.9s;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+// treanding section
+.treanding-content {
+  h5 {
+    color: $black;
+    position: relative;
+    &::after {
+      content: "";
+      width: 208px;
+      border: 1px solid $brand;
+      border-radius: 2px;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+  }
+  hr {
+    color: $text-color;
+  }
+  .bottons {
+    a {
+      color: rgba(0, 0, 0, 0.558);
+      font-size: 14px;
+      font-weight: 700 !important;
+      .active {
+        color: $black !important;
+      }
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  .tslider {
+    background-color: $w !important;
+  }
+  .card {
+    border: 0;
+    position: relative;
+    transition: 0.9s;
+
+    .card-img {
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+      }
+    }
+    .card-text {
+      p {
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 14px;
+        line-height: 25px;
+      }
+      color: $black;
+      .card-title {
+        color: $black;
+        &:hover {
+          color: $brand;
+        }
+      }
+    }
+    .icon-box {
+      position: absolute;
+      top: 40%;
+      left: 20%;
+      .box-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: $brand;
+        display: none;
+        a {
+          i {
+            color: $w;
+          }
+        }
+        &:hover {
+          background-color: $black;
+        }
+      }
+    }
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      .box-icon {
+        display: block;
+      }
+    }
+  }
+}
+
+// banner2 section
+.box-banner {
+  overflow: hidden;
+  img {
+    transition: 0.9s;
+  }
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+// company link section
+
+// latest section
+.latest-blog {
+  position: relative;
+
+  h5 {
+    color: $black;
+    position: relative;
+    &::after {
+      content: "";
+      width: 125px;
+      border: 1px solid $brand;
+      border-radius: 2px;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+  }
+  hr {
+    color: $text-color;
+  }
+  .main-blog {
+    position: relative;
+    .content-blog {
+      p {
+        font-size: 12px;
+        color: rgba(128, 128, 128, 0.624);
+      }
+      &:hover {
+        a {
+          color: $brand;
+        }
+      }
+      position: absolute;
+      top: 21%;
+      left: 40%;
+      .read-more {
+        &:hover {
+          background-color: $black;
+        }
+      }
+    }
+  }
+  .react-multiple-carousel__arrow--left {
+    position: absolute;
+    top: 89%;
+    left: 45%;
+  }
+  .react-multiple-carousel__arrow--right {
+    position: absolute;
+    top: 89%;
+    right: 45%;
+  }
+}
+
+// details section 
+.details{
+  background-color: #EAEAEA !important;
+
+  i{
+    font-size: 18px !important;
+    color:$black !important;
+  }
+  span{
+    color:$brand !important;
+  }
+
+}
+.content-box{
+  .content{
+    p{
+      font-size: 14px !important;
+    }
+    li{
+      font-size: 14px;
+    }
+   .apple{
+    padding: 4px 77px !important;
+   }
+   input{
+    width: 50px;
+   }
+  }
+  .form-text{
+    .btn{
+      background-color: $brand !important;
+      border: 0;
+      border-radius: 0;
+      &:hover{
+        background-color: $black !important;
+        color: $w !important;
+      }
+    }
+  }
+}
+
+.details-left{
+  p{
+    font-size: 13px !important;
+    color: gray;
+
+  }
+  ul{
+    li{
+      font-size: 13px !important;
+      color: gray !important;
+      line-height: 1.2;
+    }
+  }
+  .social-icon{
+    li{
+      a{
+        color: $black;
+        font-size: 18px !important;
+        i{
+          padding: 8px 10px;
+          margin: 0 6px;
+          border-radius: 6px;
+          background-color: $black !important;
+          color: $w;
+          &:hover{
+            background-color: $brand !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// footer section
+footer {
+  background-color: #eaeaea;
+  .footer-before {
+    position: relative;
+    h6 {
+      font-size: 15px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 12px;
+        width: 40px;
+        height: 2px;
+        background-color: $brand;
+      }
+    }
+    .f-text {
+      li {
+        line-height: 26px;
+        font-size: 14px;
+        color: rgb(128, 128, 128);
+
+        i {
+          color: $brand;
+        }
+        a {
+          color: rgb(128, 128, 128);
+          &:hover {
+            color: $brand;
+          }
+        }
+      }
+    }
+  }
+  .sub {
+    width: 100%;
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
+
+// footer section
+.footer {
+  p {
+    font-size: 12px;
+  }
+}
+
+// responsive
+@media (min-width: 0) and (max-width: 992px) {
+  .top {
+    display: none;
+  }
+  .popular-content h5{
+    font-size: 16px;
+    &::after{
+      width: 170px;
+      top: 37px;
+    }
+  }
+  .popular-content .card .icon-box {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+  }
+  .latest-blog h5{
+    font-size: 16px;
+    &::after{
+    width: 105px;
+    top: 37px;
+    }
+  }
+  .treanding-content {
+    h5 {
+      font-size: 14px;
+    }
+    .bottons {
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+  .treanding-content h5::after {
+    top: 32px;
+    width: 140px;
+  }
+  .latest-blog .react-multiple-carousel__arrow--right {
+    position: absolute;
+    top: 89%;
+    right: 35%;
+    width: 20px;
+    height: 20px;
+  }
+}
